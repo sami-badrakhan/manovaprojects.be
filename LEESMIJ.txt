@@ -1,0 +1,93 @@
+MANOVA-PROJECTS website
+=======================
+
+Bestanden
+---------
+index.html       Home
+over-ons.html    Over ons
+diensten.html    Diensten
+projecten.html   Projecten (galerij met filters en vergroten)
+contact.html     Contact en offerteformulier
+style.css        Alle opmaak (kleuren staan bovenaan onder :root)
+script.js        Menu, slideshow, galerij, formulier
+images/          Alle foto's en het logo
+
+Online zetten (GitHub Pages, gratis)
+------------------------------------
+Upload ALLE bestanden en de map "images" naar de hoofdmap van je
+GitHub-repository. De mappenstructuur moet hetzelfde blijven.
+Extra bestanden voor GitHub en Google:
+  CNAME        zegt tegen GitHub dat de site op manovaprojects.be draait
+  sitemap.xml  lijst van alle pagina's voor Google
+  robots.txt   laat Google alle pagina's lezen
+
+
+1. Contactformulier (Formspree)
+-------------------------------
+Het formulier is gekoppeld aan:  https://formspree.io/f/xkjobwpk
+Die link staat op één plek: in contact.html bij
+  action="https://formspree.io/f/xkjobwpk"
+Wil je later een ander Formspree-formulier gebruiken, vervang dan alleen
+de code na /f/ op die regel. In script.js hoeft niets te veranderen.
+
+Na een wijziging: zet contact.html EN script.js opnieuw op GitHub, wacht
+een paar minuten en vernieuw de pagina (op de computer Ctrl+F5).
+Stuur daarna één testbericht via de site.
+
+Komt er geen mail binnen?
+- Kijk in je Formspree-account bij het formulier onder "Submissions".
+  Staat het testbericht daar, dan werkt de website goed en zit het
+  probleem bij de e-mail: kijk in je spam-map en controleer naar welk
+  e-mailadres Formspree de berichten stuurt (instellingen van het
+  formulier). Dat adres moet een mailbox zijn die je echt leest.
+- Staat er niets bij "Submissions", kijk dan of de nieuwe contact.html
+  echt online staat (rechtsklik op de pagina, "Paginabron weergeven",
+  zoek naar xkjobwpk).
+
+
+2. Extra foto's downloaden (3 stuks)
+------------------------------------
+Voor dakwerken en isolatie had je nog geen eigen foto's. De site gebruikt
+daarom gratis foto's van Unsplash (vrij te gebruiken, ook commercieel).
+Tot je ze downloadt, laadt de site ze rechtstreeks van Unsplash.
+Beter en sneller: download ze en zet ze in de map images met EXACT deze naam:
+
+  images/dakwerk-dakpannen-leggen.jpg
+    https://unsplash.com/photos/roof-under-construction-with-tiles-being-laid-h8IxOnG6Sm4
+    (foto: Clement Proust)
+
+  images/dakwerk-antraciet-dakpannen.jpg
+    https://unsplash.com/photos/dark-grey-roof-tiles-pattern-m_vEaZizd2s
+
+  images/isolatie-glaswol-wand.jpg
+    https://unsplash.com/photos/person-installing-wiring-in-wall-insulation-aCshJn3y93s
+
+Op de Unsplash-pagina: klik "Download free" (kies "Medium" of "Large").
+
+Heb je zelf foto's van een dak of isolatiewerk? Geef die gewoon dezelfde
+naam en zet ze in images: dan staan jouw eigen realisaties op de site.
+Echte foto's van je eigen werk overtuigen klanten altijd meer.
+
+
+3. Eigen foto's (al bijgesneden en hernoemd)
+--------------------------------------------
+badkamer-vrijstaand-bad.jpg      badkamer-inloopdouche.jpg
+keuken-eiland-maatwerk.jpg       keuken-wit-marmer.jpg
+woonkamer-eethoek-parket.jpg     woonkamer-renovatie-parket.jpg
+slaapkamer-laminaat.jpg          gang-gyproc-plafond.jpg
+gevel-crepi-antraciet.jpg
+logo-manova-projects.png (logo voor donkere achtergrond, verkleind voor snelheid)
+logo-embleem.png (enkel het huisje, voor het menu)
+favicon.png (vierkant icoon voor het tabblad in de browser)
+apple-touch-icon.png (vierkant icoon als iemand de site op zijn gsm-startscherm zet)
+
+Een nieuwe foto toevoegen aan de galerij: kopieer in projecten.html een
+blok <button class="tile" ...> ... </button> en pas de foto, de titel en
+data-cat aan (badkamers, keukens, interieur, afwerking of dak-gevel).
+
+
+4. Nog na te kijken
+-------------------
+- Diensten: haal in diensten.html weg wat jullie niet doen
+  (bv. elektriciteit of ramen en deuren).
+- Reviews: zodra je echte Google-reviews hebt, kunnen die op de homepagina.
