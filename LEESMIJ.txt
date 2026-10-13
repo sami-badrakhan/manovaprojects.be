@@ -1,0 +1,92 @@
+MANOVA-PROJECTS website
+=======================
+
+Bestanden
+---------
+index.html       Home
+over-ons.html    Over ons
+diensten.html    Diensten
+projecten.html   Projecten (galerij met filters en vergroten)
+contact.html     Contact en offerteformulier (Web3Forms)
+bedankt.html     Bedankpagina na het versturen van het formulier
+style.css        Alle opmaak (kleuren staan bovenaan onder :root)
+script.js        Menu, slideshow, scroll-animaties en galerij
+images/          Alle foto's en het logo
+
+Online zetten (GitHub Pages, gratis)
+------------------------------------
+Upload ALLE bestanden en de map "images" naar de hoofdmap van je
+GitHub-repository. De mappenstructuur moet hetzelfde blijven.
+Extra bestanden voor GitHub en Google:
+  CNAME        zegt tegen GitHub dat de site op manovaprojects.be draait
+  sitemap.xml  lijst van alle pagina's voor Google
+  robots.txt   laat Google alle pagina's lezen
+
+Na een wijziging: wacht een paar minuten en vernieuw de pagina
+(op de computer Ctrl+F5).
+
+
+1. Contactformulier (Web3Forms)
+-------------------------------
+Het formulier verstuurt rechtstreeks via Web3Forms, zonder JavaScript.
+De koppeling staat op één plek in contact.html:
+  <input type="hidden" name="access_key" value="cd82872b-...">
+Wil je de berichten op een ander e-mailadres ontvangen, maak dan op
+web3forms.com een nieuwe Access Key aan voor dat adres en vervang
+alleen die waarde.
+
+Na het versturen stuurt Web3Forms de bezoeker door naar bedankt.html.
+Dat adres staat in contact.html bij:
+  <input type="hidden" name="redirect" value="https://manovaprojects.be/bedankt.html">
+Let op: die doorverwijzing werkt alleen vanaf de echte site op
+manovaprojects.be. Test je contact.html op je eigen computer, dan zie je
+nog de Engelse pagina van Web3Forms.
+bedankt.html staat bewust niet in sitemap.xml: Google hoeft ze niet te tonen.
+
+Stuur na het online zetten één testbericht via de site.
+Komt er geen mail binnen?
+- Kijk in je spam-map.
+- Controleer op web3forms.com aan welk e-mailadres de Access Key
+  gekoppeld is. Dat moet een mailbox zijn die je echt leest.
+- Kijk of de nieuwe contact.html echt online staat (rechtsklik op de
+  pagina, "Paginabron weergeven", zoek naar api.web3forms.com).
+
+
+2. Stockfoto's (3 stuks)
+------------------------
+Voor dakwerken en isolatie zijn er nog geen eigen foto's. De site laadt
+daarvoor rechtstreeks gratis foto's van Unsplash (vrij te gebruiken, ook
+commercieel):
+  - dakwerker legt dakpannen          (home en diensten, dakwerken)
+  - isolatie tussen houten stijlen     (home en diensten, isolatie)
+  - antraciet dakpannen                (achtergrond van de
+                                        "Plan uw gratis plaatsbezoek"-band)
+
+Heb je zelf foto's van een dak of isolatiewerk? Zet ze in de map images
+en vervang in de HTML de lange https://images.unsplash.com/...-link in
+src="..." door bv. images/mijn-dakwerk.jpg. Echte foto's van je eigen
+werk overtuigen klanten altijd meer.
+
+
+3. Eigen foto's (al bijgesneden en hernoemd)
+--------------------------------------------
+badkamer-vrijstaand-bad.jpg      badkamer-inloopdouche.jpg
+keuken-eiland-maatwerk.jpg       keuken-wit-marmer.jpg
+woonkamer-eethoek-parket.jpg     woonkamer-renovatie-parket.jpg
+slaapkamer-laminaat.jpg          gang-gyproc-plafond.jpg
+gevel-crepi-antraciet.jpg
+logo-manova-projects.png (logo voor donkere achtergrond, verkleind voor snelheid)
+logo-embleem.png (enkel het huisje, voor het menu)
+favicon.png (vierkant icoon voor het tabblad in de browser)
+apple-touch-icon.png (vierkant icoon als iemand de site op zijn gsm-startscherm zet)
+
+Een nieuwe foto toevoegen aan de galerij: kopieer in projecten.html een
+blok <button class="tile" ...> ... </button> en pas de foto, de titel en
+data-cat aan (badkamers, keukens, interieur, afwerking of dak-gevel).
+
+
+4. Nog na te kijken
+-------------------
+- Diensten: haal in diensten.html weg wat jullie niet doen
+  (bv. elektriciteit of ramen en deuren).
+- Reviews: zodra je echte Google-reviews hebt, kunnen die op de homepagina.
